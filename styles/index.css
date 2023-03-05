@@ -1,0 +1,41 @@
+:root {
+    --primary-accent-clr: #C780FA;
+    --primary-bg-clr: #E3ACF9;
+    --board-clr: #fbf0ff;
+
+    --player1-clr: #FADA9D;
+    --player2-clr: #ff735e;
+}
+
+html,
+body {
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+color: white;
+font-family: sans-serif;
+scroll-behavior: smooth;
+}
+
+body {
+background-color: var(--primary-bg-clr);
+-webkit-tap-highlight-color: transparent;
+}
+
+.dev-info {
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.2rem 0.5rem;
+    position: relative;
+}
+
+@media (min-width: 2460px) {
+    body {
+        width: 2460px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+    }
+}

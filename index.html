@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/board.css">
+    <link rel="stylesheet" href="styles/win-window.css">
+    <script src="script.js" defer></script>
+    <title>Connect Four</title>
+</head>
+<body>
+    <!-- header -->
+    <div class="header">
+        <div class="player_display">
+            <p>player 1</p>
+            <div class="disc player1_disc"></div>
+        </div>
+        <div class="title">
+            <h1>connect four</h1>
+        </div>
+        <div class="player_display">
+            <p>player 2</p>
+            <div class="disc player2_disc"></div>
+        </div>
+    </div>
+    <!-- header end -->
+
+    <!-- board -->
+    <div class="board-container">
+        <button id="resetBtn" onclick="resetGame()">reset</button>
+        <div class='drop-prompt'>
+            <div class='prompt'><img src='assets/arrow-down.png' alt="" /></div>
+            <div class='prompt'><img src='assets/arrow-down.png' alt="" /></div>
+            <div class='prompt'><img src='assets/arrow-down.png' alt="" /></div>
+            <div class='prompt'><img src='assets/arrow-down.png' alt="" /></div>
+            <div class='prompt'><img src='assets/arrow-down.png' alt="" /></div>
+            <div class='prompt'><img src='assets/arrow-down.png' alt="" /></div>
+            <div class='prompt'><img src='assets/arrow-down.png' alt="" /></div>
+        </div>
+        <div class='board'>
+        </div>
+
+        <!-- attribute -->
+        <p class="dev-info">made by umair</p>
+        <!-- attribute end -->
+
+    </div>
+    <!-- board end -->
+
+    <!-- win window -->
+    <div class="winDisplay" class="active">
+        <div class="container">
+            <h1 id="winnerName">winner</h1>
+            <button id="resetBtn" onclick="resetGame()">Continue</button>
+        </div>
+    </div>
+    <!-- win window end -->
+
+
+</body>
+</html> 
