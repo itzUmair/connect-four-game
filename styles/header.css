@@ -25,6 +25,7 @@
     font-size: 1.25rem;
     font-weight: 600;
     text-transform: capitalize;
+    color: rgb(200, 199, 199);
 }
 
 .disc {
@@ -35,11 +36,11 @@
 }
 
 .player1_disc {
-    background-color: var(--player1-clr);
+    background-color: var(--player1-deactive-clr);
 }
 
 .player2_disc {
-    background-color: var(--player2-clr);
+    background-color: var(--player2-deactive-clr);
 }
 
 .scoreDisplay {
@@ -54,6 +55,40 @@
     justify-content: center;
 }
 
+.player_display > p.active {
+    color: white;
+}
+
+.player1_disc.active {
+    animation: turn 1.5s infinite forwards;
+}
+
+.player2_disc.active {
+    animation: turn2 1.5s infinite;
+}
+
+@keyframes turn {
+    0% {
+        background-color: var(--player1-clr);
+    }
+    50% {
+        background-color: var(--player1-deactive-clr);
+    }
+    100% {
+        background-color: var(--player1-clr);
+    }
+}
+@keyframes turn2 {
+    0% {
+        background-color: var(--player2-deactive-clr);
+    }
+    50% {
+        background-color: var(--player2-clr);
+    }
+    100% {
+        background-color: var(--player2-deactive-clr);
+    }
+}
 
 @media (max-width: 768px) {
     .header {

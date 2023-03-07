@@ -4,7 +4,9 @@
     --board-clr: #fbf0ff;
 
     --player1-clr: #FADA9D;
+    --player1-deactive-clr: #c9af7f;
     --player2-clr: #ff735e;
+    --player2-deactive-clr: #b04f40;
 }
 
 html,

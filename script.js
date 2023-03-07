@@ -2,9 +2,15 @@ let board = document.getElementsByClassName('board');
 let winWindow = document.getElementsByClassName('winDisplay');
 let winnerName = document.getElementById('winnerName');
 
+let player1 = document.getElementsByClassName('player1');
+let player2 = document.getElementsByClassName('player2');
+
+let player1_disc = document.getElementsByClassName('player1_disc');
+let player2_disc = document.getElementsByClassName('player2_disc');
+
 let winner = undefined;
 
-let turn = '1';
+let turn = undefined;
 
 let grid = [
     ['_', '_', '_', '_', '_', '_', '_'],
@@ -14,6 +20,22 @@ let grid = [
     ['_', '_', '_', '_', '_', '_', '_'],
     ['_', '_', '_', '_', '_', '_', '_']        
 ];
+
+function displayTurn () {
+    if(turn === '1') {
+        player2[0].classList.remove('active')
+        player2_disc[0].classList.remove('active')
+
+        player1[0].classList.add('active')
+        player1_disc[0].classList.add('active')
+    } if(turn === '0') {
+        player1[0].classList.remove('active')
+        player1_disc[0].classList.remove('active')
+
+        player2[0].classList.add('active')
+        player2_disc[0].classList.add('active')
+    }
+}
 
 function displayColumn(event) {
     let column = (event.target.getAttribute("data-ref")) % 7
@@ -42,6 +64,7 @@ function move(event) {
         }
     }
     drawBoard()
+    displayTurn()
 }
 
 
@@ -137,6 +160,8 @@ function resetGame() {
         ['_', '_', '_', '_', '_', '_', '_']        
     ];
     drawBoard()
+    turnSystem()
+    displayTurn()
 }
 
 function displayWinWindow() {
@@ -151,3 +176,4 @@ function displayWinWindow() {
 
 turnSystem()
 drawBoard()
+displayTurn()
